@@ -22,7 +22,6 @@ public class MainActivity extends AppCompatActivity
 {
   private static final String WORD_LIST_FILE_NAME = "word-list.txt";
   
-  private EditText lettersInput;
   private ViewSwitcher resultsViewSwitcher;
   private TextView resultsPlaceholder;
   private RecyclerView resultsContainer;
@@ -34,7 +33,7 @@ public class MainActivity extends AppCompatActivity
     super.onCreate(savedInstanceState);
     setContentView(R.layout.main_activity);
     
-    lettersInput = findViewById(R.id.letters_input);
+    final EditText lettersInput = findViewById(R.id.letters_input);
     resultsViewSwitcher = findViewById(R.id.results_view_switcher);
     resultsPlaceholder = findViewById(R.id.results_placeholder);
     resultsContainer = findViewById(R.id.results_container);
