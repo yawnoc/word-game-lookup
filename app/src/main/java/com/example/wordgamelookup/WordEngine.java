@@ -1,8 +1,8 @@
 package com.example.wordgamelookup;
 
-import java.util.HashSet;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.NavigableSet;
-import java.util.Set;
 
 public final class WordEngine
 {
@@ -11,8 +11,8 @@ public final class WordEngine
     // Do not instantiate
   }
   
-  public static Set<String> getWordsByPrefix(final NavigableSet<String> wordSet, final String prefix)
+  public static List<String> getWordsByPrefix(final NavigableSet<String> wordSet, final String prefix)
   {
-    return new HashSet<>(wordSet.subSet(prefix, true, prefix + Character.MAX_VALUE, false));
+    return new ArrayList<>(wordSet.subSet(prefix, true, prefix + Character.MAX_VALUE, false));
   }
 }

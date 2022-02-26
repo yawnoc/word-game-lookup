@@ -14,8 +14,8 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.List;
 import java.util.NavigableSet;
-import java.util.Set;
 import java.util.TreeSet;
 
 public class MainActivity extends AppCompatActivity
@@ -55,14 +55,14 @@ public class MainActivity extends AppCompatActivity
           }
           else
           {
-            final Set<String> matchWordSet = WordEngine.getWordsByPrefix(wordSet, prefix);
-            if (matchWordSet.size() == 0)
+            final List<String> matchWordList = WordEngine.getWordsByPrefix(wordSet, prefix);
+            if (matchWordList.size() == 0)
             {
               showResultsPlaceholder(prefix);
             }
             else
             {
-              showResultsContainer(matchWordSet);
+              showResultsContainer(matchWordList);
             }
           }
         }
@@ -113,7 +113,7 @@ public class MainActivity extends AppCompatActivity
     }
   }
   
-  private void showResultsContainer(final Set<String> matchWordSet)
+  private void showResultsContainer(final List<String> matchWordList)
   {
     if (resultsViewSwitcher.getCurrentView() != resultsContainer)
     {

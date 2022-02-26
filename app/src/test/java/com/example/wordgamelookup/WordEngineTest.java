@@ -4,6 +4,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashSet;
@@ -30,10 +31,10 @@ public class WordEngineTest
     wordSet.add("axel");
     wordSet.add("axes");
     
-    assertEquals(WordEngine.getWordsByPrefix(wordSet, ""), wordSet);
-    assertEquals(WordEngine.getWordsByPrefix(wordSet, "xxx"), Collections.emptySet());
-    assertEquals(WordEngine.getWordsByPrefix(wordSet, "aa"), new HashSet<>(Arrays.asList("aa", "aaa")));
-    assertEquals(WordEngine.getWordsByPrefix(wordSet, "an"), new HashSet<>(Arrays.asList("an", "ant", "anteater", "ants")));
-    assertEquals(WordEngine.getWordsByPrefix(wordSet, "axes"), new HashSet<>(Collections.singletonList("axes")));
+    assertEquals(WordEngine.getWordsByPrefix(wordSet, ""), new ArrayList<>(wordSet));
+    assertEquals(WordEngine.getWordsByPrefix(wordSet, "xxx"), Collections.emptyList());
+    assertEquals(WordEngine.getWordsByPrefix(wordSet, "aa"), Arrays.asList("aa", "aaa"));
+    assertEquals(WordEngine.getWordsByPrefix(wordSet, "an"), Arrays.asList("an", "ant", "anteater", "ants"));
+    assertEquals(WordEngine.getWordsByPrefix(wordSet, "axes"), Collections.singletonList("axes"));
   }
 }
