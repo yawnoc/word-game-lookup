@@ -2,7 +2,7 @@
   <string name="app_name">Word game lookup</string>
   <string name="hint__main_activity__letters_input">Type here</string>
   <string name="text__main_activity__words_info">
-    Words shall appear here.\n\n
+    Words (prefix matches) will appear here.\n\n
     WARNING! OFFENSIVE LANGUAGE!\n
     The word list is taken from yawl (Yet Another Word List) by thegrendel.
     No attempt is made to censor any of the words.
