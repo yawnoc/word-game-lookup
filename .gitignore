@@ -8,6 +8,6 @@ local.properties
 /build
 /captures
 /local.properties
-/.idea/*
+/.idea/
 
 *.iml
