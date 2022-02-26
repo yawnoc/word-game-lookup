@@ -1,4 +1,10 @@
 <resources>
   <string name="app_name">Word game lookup</string>
   <string name="hint__main_activity__letters_input">Type here</string>
+  <string name="text__main_activity__words_info">
+    Words shall appear here.\n\n
+    WARNING! OFFENSIVE LANGUAGE!\n
+    No attempt shall be made to censor any of the words,
+    which are taken from yawl (Yet Another Word List) by thegrendel.
+  </string>
 </resources>
