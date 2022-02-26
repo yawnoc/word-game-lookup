@@ -1,6 +1,7 @@
 package com.example.wordgamelookup;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
@@ -14,6 +15,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.NavigableSet;
 import java.util.TreeSet;
@@ -25,6 +27,9 @@ public class MainActivity extends AppCompatActivity
   private ViewSwitcher resultsViewSwitcher;
   private TextView resultsPlaceholder;
   private RecyclerView resultsContainer;
+  
+  private ResultsAdapter resultsAdapter;
+  
   private final NavigableSet<String> wordSet = new TreeSet<>();
   
   @Override
@@ -75,6 +80,10 @@ public class MainActivity extends AppCompatActivity
     );
     lettersInput.requestFocus();
     
+    resultsContainer.setLayoutManager(new LinearLayoutManager(this));
+    resultsAdapter = new ResultsAdapter(this, new ArrayList<>());
+    resultsContainer.setAdapter(resultsAdapter);
+    
     loadWords();
   }
   
@@ -119,5 +128,7 @@ public class MainActivity extends AppCompatActivity
     {
       resultsViewSwitcher.showNext();
     }
+    
+    resultsAdapter.updateMatchWordList(matchWordList);
   }
 }

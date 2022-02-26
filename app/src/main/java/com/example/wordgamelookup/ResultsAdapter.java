@@ -1,5 +1,6 @@
 package com.example.wordgamelookup;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.ViewGroup;
 import android.widget.TextView;
@@ -18,6 +19,14 @@ public class ResultsAdapter extends RecyclerView.Adapter<ResultsAdapter.ResultHo
   {
     this.context = context;
     this.matchWordList = matchWordList;
+  }
+  
+  @SuppressLint("NotifyDataSetChanged")
+  public void updateMatchWordList(final List<String> matchWordList)
+  {
+    this.matchWordList.clear();
+    this.matchWordList.addAll(matchWordList);
+    notifyDataSetChanged();
   }
   
   @NonNull
