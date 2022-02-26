@@ -4,7 +4,7 @@
   <string name="text__main_activity__words_info">
     Words shall appear here.\n\n
     WARNING! OFFENSIVE LANGUAGE!\n
-    No attempt shall be made to censor any of the words,
+    No attempt is made to censor any of the words,
     which are taken from yawl (Yet Another Word List) by thegrendel.
   </string>
   <string name="text__main_activity__no_words">No words with prefix \'%s\'.</string>
