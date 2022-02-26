@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+  <dimen name="font_size__main_activity">16sp</dimen>
   <dimen name="padding__main_activity__root">12dp</dimen>
   <dimen name="padding_horizontal__main_activity__children">4dp</dimen>
   <dimen name="min_height__main_activity__input">48dp</dimen>

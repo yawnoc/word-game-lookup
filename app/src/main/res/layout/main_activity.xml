@@ -15,6 +15,7 @@
     android:hint="@string/hint__main_activity__letters_input"
     android:importantForAutofill="no"
     android:inputType="text"
+    android:textSize="@dimen/font_size__main_activity"
     android:minHeight="@dimen/min_height__main_activity__input"
     android:paddingHorizontal="@dimen/padding_horizontal__main_activity__children"
     android:layout_marginBottom="@dimen/margin_bottom__main_activity__input"
@@ -28,6 +29,7 @@
       android:layout_width="match_parent"
       android:layout_height="match_parent"
       android:id="@+id/results_placeholder"
+      android:textSize="@dimen/font_size__main_activity"
       android:gravity="center|top"
       android:text="@string/text__main_activity__words_info"
     />

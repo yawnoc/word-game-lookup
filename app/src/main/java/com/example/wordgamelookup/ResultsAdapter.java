@@ -2,6 +2,7 @@ package com.example.wordgamelookup;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.view.LayoutInflater;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
@@ -12,12 +13,12 @@ import java.util.List;
 
 public class ResultsAdapter extends RecyclerView.Adapter<ResultsAdapter.ResultHolder>
 {
-  private final Context context;
+  private final LayoutInflater layoutInflater;
   private final List<String> matchWordList;
   
   ResultsAdapter(final Context context, final List<String> matchWordList)
   {
-    this.context = context;
+    this.layoutInflater = LayoutInflater.from(context);
     this.matchWordList = matchWordList;
   }
   
@@ -33,7 +34,7 @@ public class ResultsAdapter extends RecyclerView.Adapter<ResultsAdapter.ResultHo
   @Override
   public ResultHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int viewType)
   {
-    final TextView resultView = new TextView(context);
+    final TextView resultView = (TextView) layoutInflater.inflate(R.layout.result_view, viewGroup, false);
     return new ResultHolder(resultView);
   }
   
