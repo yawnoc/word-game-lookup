@@ -1,4 +1,4 @@
 <resources>
   <string name="app_name">Word game lookup</string>
-  <string name="hint__main_activity__letters_input">Input letters here</string>
+  <string name="hint__main_activity__letters_input">Type here</string>
 </resources>
