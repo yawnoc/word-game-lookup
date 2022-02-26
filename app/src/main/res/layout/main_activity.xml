@@ -5,6 +5,7 @@
   android:layout_width="match_parent"
   android:layout_height="match_parent"
   android:orientation="vertical"
+  android:padding="@dimen/padding__main_activity__root"
   tools:context=".MainActivity"
 >
   <EditText
@@ -14,6 +15,9 @@
     android:hint="@string/hint__main_activity__letters_input"
     android:importantForAutofill="no"
     android:inputType="text"
+    android:minHeight="@dimen/min_height__main_activity__input"
+    android:paddingHorizontal="@dimen/padding_horizontal__main_activity__children"
+    android:layout_marginBottom="@dimen/margin_bottom__main_activity__input"
   />
   <ViewSwitcher
     android:layout_width="match_parent"
@@ -31,6 +35,7 @@
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:id="@+id/results_container"
+      android:paddingHorizontal="@dimen/padding_horizontal__main_activity__children"
     />
   </ViewSwitcher>
 </LinearLayout>
