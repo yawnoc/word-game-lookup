@@ -18,7 +18,7 @@
   <ViewSwitcher
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/view_switcher"
+    android:id="@+id/results_view_switcher"
   >
     <TextView
       android:layout_width="match_parent"
