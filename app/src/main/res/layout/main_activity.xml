@@ -24,7 +24,7 @@
       android:layout_width="match_parent"
       android:layout_height="match_parent"
       android:id="@+id/results_placeholder"
-      android:gravity="center"
+      android:gravity="center|top"
       android:text="@string/text__main_activity__words_info"
     />
     <androidx.recyclerview.widget.RecyclerView
