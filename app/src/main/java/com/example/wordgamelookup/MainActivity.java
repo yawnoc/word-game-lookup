@@ -11,5 +11,6 @@ public class MainActivity extends AppCompatActivity
   {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.main_activity);
+    findViewById(R.id.letters_input).requestFocus();
   }
 }
