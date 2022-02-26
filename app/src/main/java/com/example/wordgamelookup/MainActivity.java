@@ -130,5 +130,6 @@ public class MainActivity extends AppCompatActivity
     }
     
     resultsAdapter.updateMatchWordList(matchWordList);
+    resultsContainer.scrollToPosition(0);
   }
 }
