@@ -52,14 +52,14 @@ public class MainActivity extends AppCompatActivity
           final String prefix = newText.toString();
           if (prefix.length() == 0)
           {
-            showResultsPlaceholder(true);
+            showResultsPlaceholder(prefix);
           }
           else
           {
             final Set<String> matchWordSet = WordEngine.getWordsByPrefix(wordSet, prefix);
             if (matchWordSet.size() == 0)
             {
-              showResultsPlaceholder(false);
+              showResultsPlaceholder(prefix);
             }
             else
             {
@@ -97,11 +97,20 @@ public class MainActivity extends AppCompatActivity
     }
   }
   
-  private void showResultsPlaceholder(final boolean prefixIsEmpty)
+  private void showResultsPlaceholder(final String prefix)
   {
     if (resultsViewSwitcher.getCurrentView() != resultsPlaceholder)
     {
       resultsViewSwitcher.showPrevious();
+    }
+    
+    if (prefix.length() == 0)
+    {
+      resultsPlaceholder.setText(R.string.text__main_activity__words_info);
+    }
+    else
+    {
+      resultsPlaceholder.setText(getString(R.string.text__main_activity__no_words, prefix));
     }
   }
   
